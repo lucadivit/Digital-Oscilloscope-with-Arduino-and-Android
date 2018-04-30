@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"BluetoothSerial\"><param name=\"android-package\" value=\"com.megster.cordova.BluetoothSerial\" /></feature>",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-bluetooth-serial": {
+            "PACKAGE_NAME": "com.phonegap.example"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.phonegap.example"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-bluetooth-serial/www/bluetoothSerial.js",
+            "id": "cordova-plugin-bluetooth-serial.bluetoothSerial",
+            "clobbers": [
+                "window.bluetoothSerial"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+            "id": "cordova-plugin-dialogs.notification",
+            "merges": [
+                "navigator.notification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+            "id": "cordova-plugin-dialogs.notification_android",
+            "merges": [
+                "navigator.notification"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-bluetooth-serial": "0.4.5",
+        "cordova-plugin-dialogs": "1.2.0"
+    }
+}

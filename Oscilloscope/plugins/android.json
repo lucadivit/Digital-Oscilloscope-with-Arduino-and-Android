@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-bluetooth-serial": {
+            "PACKAGE_NAME": "com.phonegap.example"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.phonegap.example"
+        }
+    },
+    "dependent_plugins": {}
+}
